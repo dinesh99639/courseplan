@@ -1,31 +1,31 @@
 # Course File Management System
-This course files project is designed purely for faculty to maintain the records of lesson plan, timetable, assignment, mid paper, rubrics, remedial classes, tutorial classes.                      
+This course files project is designed purely for faculty to maintain the records of the lesson plan, timetable, assignment, mid paper, rubrics, remedial classes, tutorial classes.                      
 This course plan helps the faculty to make the course plan online and helps to store the course details without the fear of losing the documents.
 
-course files System is a one stop solution for all the course file systems. This system’s access is granted only to the Administrator and Faculty and provides the users a very friendly user interface.
+course files System is a one-stop solution for all the course file systems. This system’s access is granted only to the Administrator and Faculty and provides the users with a very friendly user interface.
 
-Administrator’s functionalities are to add faculty, map faculty to subject, view upload status of all faculty, map faculty to review the question paper, update database.
+Administrator’s functionalities are to add faculty, map faculty to a subject, view upload status of all faculty, map faculty to review the question paper, update the database.
 
-Faculty’s functionalities are to upload the assignment question paper, mid question paper, review paper, tutorial, and to fill the details of the remedial classes, rubrics, roleplay, open book test.
+Faculty’s functionalities are to upload the assignment question paper, mid-question paper, review paper, tutorial, and to fill the details of the remedial classes, rubrics, roleplay, open-book test.
 
-This System is a replacement to the existing Course files System, so as to reduce paper-work and to avoid the loss of data. This system can be accessed by all the intended users, all the time based on the Network Availability through a desktop computer or personal mobile device.
+This System is a replacement to the existing Course files System, to reduce paper-work and to avoid the loss of data. This system can be accessed by all the intended users, all the time based on the Network Availability through a desktop computer or personal mobile device.
 
-Faculty have to upload the required documents and fill the details. The proposed system helps the management in taking actions regarding issues faced by the faculty in the institution quicker. This system ensures both security and maintainability. This System has scope to make changes easily, because it has been developed by using the feature of Modularity.
+The faculty have to upload the required documents and fill the details. The proposed system helps the management in taking actions regarding issues faced by the faculty in the institution quicker. This system ensures both security and maintainability. This System has scope to make changes easily because it has been developed by using the feature of Modularity.
 
 
 ## Features
-* Administrator or Faculty has the ability to Login.
+* Administrator or Faculty can log in.
 * Admin can export Faculty Details.
 * Admin can Map Subject to a Faculty Member.
-* Admin has the ability to update the Database.
-* Admin has the ability to modify the Mapping of Faculty.
+* Admin can update the Database.
+* Admin can modify the Mapping of Faculty.
 * Admin or Faculty can view Course plan details.
-* Admin and Faculty have the ability to Change Password.
-* Faculty must upload the timetable, mid question paper, mid answer scripts, assessment paper, and fill the details of remedial classes, tutorial classes, rubrics.
+* Admin and Faculty can Change Password.
+* Faculty must upload the timetable, mid-question paper, mid answer scripts, assessment paper, and fill the details of remedial classes, tutorial classes, rubrics.
 
 ## Getting Started
 
-Below link is the implemented version of the entire project.
+The below link is the implemented version of the entire project.
 Link Removed
 
 ### Prerequisites
@@ -34,25 +34,25 @@ Your system must be installed with xampp/wampp server running with Apache and My
 
 ### Installing
 
-If you want to deploy this project in you machine, import the courseplan.sql file into mysql. Change the database name in db.php.
+If you want to deploy this project in your machine, import the courseplan.sql file into MySQL. Change the database name in db.php.
 Otherwise, you can test the implemented model( Link Removed ).
 
 ## Running the tests
 
-<h3 align="center"><u>Faculty</u></h3>
+<h3 align="center">Faculty</h3>
 
 ### Home Page (Login Page)
 ![Login](README/images/faculty/login.png)
 
-* You can login as Faculty/Admin from this page.
-* If you forgot your password, you can change it by clicking "Forgot Password" option below the Login button.
+* You can log in as Faculty/Admin from this page.
+* If you forgot your password, you can change it by clicking the "Forgot Password" option below the Login button.
 
 ### Courses
 ![Courses](README/images/faculty/course.png)
 
 * After login, this is the course selection page for faculty.
-* In this, first you have to select the acedamic year.
-* Then the courses that the faculty teaching/tought will appear here.
+* In this, first you have to select the academic year.
+* Then the courses that the faculty teaching/taught will appear here.
 * Now, select any course of your choice.
 
 ### Faculty Course Dashboard
@@ -66,8 +66,8 @@ Otherwise, you can test the implemented model( Link Removed ).
 ### Upload Page
 ![Upload](README/images/faculty/upload.png)
 
-* In this page, you can upload the files like images, audio, video, text files, etc.
-* Uploading of php files is not allowed.
+* On this page, you can upload the files like images, audio, video, text files, etc.
+* Uploading of PHP files is not allowed.
 
 ### Open File
 ![Open File](README/images/faculty/Open%20File.png)
@@ -77,18 +77,18 @@ Otherwise, you can test the implemented model( Link Removed ).
 ### Mid papers
 ![Mid Papers](README/images/faculty/mid.png)
 
-* In this page, you can upload paper, scheme of evalution, key, marks, sample papers.
+* On this page, you can upload paper, scheme of evolution, key, marks, sample papers.
 * You can send the mid paper for review by other faculty who are teaching the same subject.
 
 ### Assignments
 ![Mid Papers](README/images/faculty/Assignments.png)
 
-* In this page, you can upload CO Attainment, Bloom's Taxonomy, Rubric, Marks.
+* On this page, you can upload CO Attainment, Bloom's Taxonomy, Rubric, Marks.
 
 ### Question Paper
 ![Question Paper](README/images/faculty/question%20paper.png)
 
-* In this page, you can create your own question paper.
+* On this page, you can create your question paper.
 
 ### Rubric
 ![Rurbic](README/images/faculty/rubrics.png)
@@ -98,12 +98,12 @@ Otherwise, you can test the implemented model( Link Removed ).
 ### Quiz
 ![Quiz](README/images/faculty/quiz.png)
 
-* In this page, you can add the quiz links of moodle.
+* On this page, you can add the quiz links of moodle.
 
 ### Remedial Classes
 ![Remedial Classes](README/images/faculty/remedial.png)
 
-* You can maintain the remedial classes data.
+* You can maintain the remedial class data.
 
 ### Content Beyond Syllabus
 ![Content Beyond Syllabus](README/images/faculty/content%20beyond%20syllabus.png)
@@ -119,25 +119,27 @@ Otherwise, you can test the implemented model( Link Removed ).
 ![Reviewer](README/images/faculty/reviewer.png)
 
 * We can review the mid papers that others sent to you.
-* You should enter the question no, co, po, matched(yes/no).
+* You should enter the question no, CO, PO, matched(yes/no).
 
 ### Roleplay List
 ![Roleplay List](README/images/faculty/roleplay_index.png)
 
 * The roleplay list that you have created will be displayed here.
-* You can create a new roleplay by entering a name for roleplay and click New roleplay button.
+* You can create a new roleplay by entering a name for roleplay and click the New roleplay button.
 
 ### Tutorial Classes
 ![Tutorial Classes](README/images/faculty/tutorial%20classes.png)
 
-* You can enter the data of tutorial classes cunducted here.
+* You can enter the data of tutorial classes conducted here.
 
-<h3 align="center"><u>Admin</u></h3>
+
+
+<h3 align="center">Admin</h3>
 
 ### Edit Lecturer
 ![Edit Lecturer](README/images/admin/edit%20lecturer.png)
 
-* In this page, you can edit review and delete assigned lecturer.
+* On this page, you can edit review and delete the assigned lecturer.
 
 ### Review Report
 ![Review Report](README/images/admin/review%20report.png)
@@ -145,9 +147,9 @@ Otherwise, you can test the implemented model( Link Removed ).
 * When you click review in edit lecturer page, the following page appears.
 * You can set the status of the individual pages here by giving the review.
 * Click on mark completed if updated data is correct.
-* At last, don't forget to click update button located at the end of the page.
+* At last, don't forget to click the update button located at the end of the page.
 
-* Exclamatory symbol(!) appears when the lecurer clicks on the button placed at bottom right side of some pages and click on "send for review".
+* Exclamatory symbol(!) appears when the lecturer clicks on the button placed at the bottom right side of some pages and click on "send for review".
 
 ### Overall Review
 ![Overall Review](README/images/admin/overall%20review.png)
