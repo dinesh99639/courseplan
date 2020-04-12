@@ -60,6 +60,8 @@ Otherwise, you can test the implemented model( Link Removed ).
 
 * From this page, you can view the status of the review of your course file.
 * You can change your password from this page.
+* You can select the required page from the left side menu.
+* you can expand and collapse this sidebar.
 
 ### Upload Page
 ![Upload](README/images/faculty/upload.png)
@@ -129,6 +131,38 @@ Otherwise, you can test the implemented model( Link Removed ).
 ![Tutorial Classes](README/images/faculty/tutorial%20classes.png)
 
 * You can enter the data of tutorial classes cunducted here.
+
+<h3 align="center">Admin</h3>
+
+### Edit Lecturer
+![Edit Lecturer](README/images/admin/edit%20lecturer.png)
+
+* In this page, you can edit review and delete assigned lecturer.
+
+### Review Report
+![Review Report](README/images/admin/review%20report.png)
+
+* When you click review in edit lecturer page, the following page appears.
+* You can set the status of the individual pages here by giving the review.
+* Click on mark completed if updated data is correct.
+* At last, don't forget to click update button located at the end of the page.
+
+* Exclamatory symbol(!) appears when the lecurer clicks on the button placed at bottom right side of some pages and click on "send for review".
+
+### Overall Review
+![Overall Review](README/images/admin/overall%20review.png)
+
+* The review of all the assigned lecturers of a particular academic year appears here.
+
+### Add User
+![Add user](README/images/admin/add%20user.png)
+
+* You can add new users here.
+
+### Assign Lecturer
+![Assign Lecturer](README/images/admin/assign%20lecturer.png)
+
+* You can assign lecturers to different subjects here.
 
 
 ## Built With
