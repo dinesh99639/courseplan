@@ -68,7 +68,7 @@ Otherwise, you can test the implemented model( Link Removed ).
 * Uploading of php files is not allowed.
 
 ### Open File
-![Open File](README/images/faculty/Open File.png)
+![Open File](README/images/faculty/Open%20File.png)
 
 ## Built With
 
