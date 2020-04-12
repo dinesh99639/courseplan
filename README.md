@@ -70,6 +70,67 @@ Otherwise, you can test the implemented model( Link Removed ).
 ### Open File
 ![Open File](README/images/faculty/Open%20File.png)
 
+* You can view, update, rename and delete a file.
+
+### Mid papers
+![Mid Papers](README/images/faculty/mid.png)
+
+* In this page, you can upload paper, scheme of evalution, key, marks, sample papers.
+* You can send the mid paper for review by other faculty who are teaching the same subject.
+
+### Assignments
+![Mid Papers](README/images/faculty/Assignments.png)
+
+* In this page, you can upload CO Attainment, Bloom's Taxonomy, Rubric, Marks.
+
+### Question Paper
+![Question Paper](README/images/faculty/question%20paper.png)
+
+* In this page, you can create your own question paper.
+
+### Rubric
+![Rurbic](README/images/faculty/rubrics.png)
+
+* Creation of rubric for the assignment and mid papers are possible from this page.
+
+### Quiz
+![Quiz](README/images/faculty/quiz.png)
+
+* In this page, you can add the quiz links of moodle.
+
+### Remedial Classes
+![Remedial Classes](README/images/faculty/remedial.png)
+
+* You can maintain the remedial classes data.
+
+### Content Beyond Syllabus
+![Content Beyond Syllabus](README/images/faculty/content%20beyond%20syllabus.png)
+
+* The data of any extra topics that were explained to students can be maintained here.
+
+### Review
+![Review](README/images/faculty/review.png)
+
+* You can review the mid papers that others sent to you here.
+
+### Reviewer
+![Reviewer](README/images/faculty/reviewer.png)
+
+* We can review the mid papers that others sent to you.
+* You should enter the question no, co, po, matched(yes/no).
+
+### Roleplay List
+![Roleplay List](README/images/faculty/roleplay_index.png)
+
+* The roleplay list that you have created will be displayed here.
+* You can create a new roleplay by entering a name for roleplay and click New roleplay button.
+
+### Tutorial Classes
+![Tutorial Classes](README/images/faculty/tutorial%20classes.png)
+
+* You can enter the data of tutorial classes cunducted here.
+
+
 ## Built With
 
 * HTML
