@@ -14,14 +14,14 @@ Faculty have to upload the required documents and fill the details. The proposed
 
 
 ## Features
-•	Administrator or Faculty has the ability to Login.
-•	Admin can export Faculty Details.
-•	Admin can Map Subject to a Faculty Member.
-•	Admin has the ability to update the Database.
-•	Admin has the ability to modify the Mapping of Faculty.
-•	Admin or Faculty can view Course plan details.
-•	Admin and Faculty have the ability to Change Password.
-•	Faculty must upload the timetable, mid question paper, mid answer scripts, assessment paper, and fill the details of remedial classes, tutorial classes, rubrics.
+* Administrator or Faculty has the ability to Login.
+* Admin can export Faculty Details.
+* Admin can Map Subject to a Faculty Member.
+* Admin has the ability to update the Database.
+* Admin has the ability to modify the Mapping of Faculty.
+* Admin or Faculty can view Course plan details.
+* Admin and Faculty have the ability to Change Password.
+* Faculty must upload the timetable, mid question paper, mid answer scripts, assessment paper, and fill the details of remedial classes, tutorial classes, rubrics.
 
 ## Getting Started
 
@@ -39,7 +39,7 @@ Otherwise, you can test the implemented model( Link Removed ).
 
 ## Running the tests
 
-### 1. Login page
+### 1. Home Page
 ![Login](README/images/faculty/login.png)
 
 ### 3. Password page
