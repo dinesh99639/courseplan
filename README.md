@@ -39,7 +39,7 @@ Otherwise, you can test the implemented model( Link Removed ).
 
 ## Running the tests
 
-<h3 align="center">Faculty</h3>
+<h3 align="center"><u>Faculty</u></h3>
 
 ### Home Page (Login Page)
 ![Login](README/images/faculty/login.png)
@@ -132,7 +132,7 @@ Otherwise, you can test the implemented model( Link Removed ).
 
 * You can enter the data of tutorial classes cunducted here.
 
-<h3 align="center">Admin</h3>
+<h3 align="center"><u>Admin</u></h3>
 
 ### Edit Lecturer
 ![Edit Lecturer](README/images/admin/edit%20lecturer.png)
