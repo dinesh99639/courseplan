@@ -39,31 +39,36 @@ Otherwise, you can test the implemented model( Link Removed ).
 
 ## Running the tests
 
-<h2 align="center">Faculty</h2>
+<h3 align="center">Faculty</h3>
 
-### 1. Home Page (Login Page)
+### Home Page (Login Page)
 ![Login](README/images/faculty/login.png)
 
-### 3. Password page
-![Password](images/password.png)
+* You can login as Faculty/Admin from this page.
+* If you forgot your password, you can change it by clicking "Forgot Password" option below the Login button.
 
-* For example, the password is set as 123 by the user while
-registration.
-* First, the block number containing the first digit is checked. 
-* It is present in block 1, then the number to be added to the first digit is checked in the given square boxes below. 
-Suppose 1 is to be added to the block according to the given box below, the total would be (Block_1 + ADD_1) = 2.
-Hence block 2 should be clicked for the first digit to be entered.
-* This process is continued for the remaining digits entry.
-* If the sum of the number exceeds the number of blocks present, the count should be started from block 1 again.
-For example, if the sum is 6, and the blocks present are only 4, block 2 should be clicked.
+### Courses
+![Courses](README/images/faculty/course.png)
 
-### 4. Dashboard page
-![Dashboard](images/loggedin.png)
-After the user successfully logs in the following message is displayed.
+* After login, this is the course selection page for faculty.
+* In this, first you have to select the acedamic year.
+* Then the courses that the faculty teaching/tought will appear here.
+* Now, select any course of your choice.
 
-### 4. Not Logged in
-![Not Logged in](images/not_loggedin.png)
-If the user enters the dashboard without logging in the following message is displayed.
+### Faculty Course Dashboard
+![Login](README/images/faculty/dashboard.png)
+
+* From this page, you can view the status of the review of your course file.
+* You can change your password from this page.
+
+### Upload Page
+![Upload](README/images/faculty/upload.png)
+
+* In this page, you can upload the files like images, audio, video, text files, etc.
+* Uploading of php files is not allowed.
+
+### Open File
+![Open File](README/images/faculty/Open File.png)
 
 ## Built With
 
