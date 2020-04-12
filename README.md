@@ -39,7 +39,7 @@ Otherwise, you can test the implemented model( Link Removed ).
 
 ## Running the tests
 
-<h3 align="center">Faculty</h3>
+<h2 align="center">Faculty</h2>
 
 ### 1. Home Page (Login Page)
 ![Login](README/images/faculty/login.png)
