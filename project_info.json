@@ -1,8 +1,8 @@
 {
-	"name": "Github Projects",
+	"name": "CourseFiles",
 	"icon": "",
-	"desc": "This website is used to manage all social media at one place and list all github projects at one place.",
-	"tech": ["HTML", "CSS", "JavaScript", "jQuery", "BootStrap"],
+	"desc": "With this project, the teachers can be able to manage data in the online so that we can reduce the paper work and it is easy to get files whenever required.",
+	"tech": ["HTML", "CSS", "JavaScript", "jQuery", "BootStrap", "PHP", "MySQL"],
 
 	"from": "",
 	"to": ""
