@@ -177,7 +177,7 @@ Otherwise, you can test the implemented model( Link Removed ).
 * php
 * MySQL
 
-## Authors
+## Contributers
 
 * **S.Dinesh**
 * **V.Jahnavi**
