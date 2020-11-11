@@ -193,6 +193,7 @@ $upload_files = array("paper", "scheme", "key", "marks", "sample_papers");
         {
             // $('#paper_view_model').load("load_paper_model.php?path="+encodeURIComponent(path)+"&rand="+(Math.random()*1000000),{},()=>{
                 // console.log(path);
+                path+"?v="+$.now()
                 $('#model_frame').attr('src', path+"?v="+$.now());
                 $('#model_download').attr('href', path+"?v="+$.now());
                 $('#model_upload').attr('path', path);
