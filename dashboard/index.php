@@ -11,7 +11,7 @@ if (isset($_GET['sid']))
 {
 	$_SESSION['sid']=$_GET['sid'];
 	$_SESSION['subject_name']=$_GET['subject_name'];
-	?><script type="text/javascript">window.location.href="coursefile.php";</script><?php
+	header("Location:coursefile.php");
 }
 
 $fid = $_SESSION['userid'];
@@ -30,7 +30,6 @@ if (isset($_GET['acyear']))
 	$sem1 = mysqli_query ($db, $qry);
 }
 
-// echo "sad";
 ?>
 
 
@@ -89,7 +88,8 @@ if (isset($_GET['acyear']))
 		{
 			position: relative;
 			margin: 30px 0;
-			height: 300px;
+			/*height: 300px;*/
+			height: 42.5%;
 			background: rgba(0,0,0,0);
 			padding: 20px;
 			box-sizing: border-box;
@@ -106,6 +106,7 @@ if (isset($_GET['acyear']))
 			color: white;
 			text-align: center;
 			font-size: 20px;
+			/*font-size: 140%;*/
 		}
 		.card .section
 		{
@@ -132,11 +133,11 @@ if (isset($_GET['acyear']))
 					</div>
 				</div>
 				<div class="col-sm-10">
-					<div class="container">
+					<div class="container-fluid">
 						<?php 
 						if (isset($sem2))
 						if (mysqli_num_rows($sem2)>0) { ?>
-						<h3 style="color: #fff; text-align: center;"><?php echo $acyear ?> Semester - 2</h3>
+						<h3 style="width: 100%; color: #fff; text-align: center;"><?php echo $acyear ?> Semester - 2</h3>
 						<?php } ?>
 						<div class="row">
 							<?php 
@@ -155,7 +156,7 @@ if (isset($_GET['acyear']))
 								<div class="card" onclick="window.location.href='index.php?sid=<?php echo $row['sid']."&subject_name=".$row['subject_name'] ?>'">
 									<div class="subject"><?php echo $row['subject_name'] ?></div>
 									<div class="section">(<?php echo $row['year'] ?>/4 <?php echo $row['section'] ?>)</div>
-									<div class="progress-circle progress-<?php echo $progress ?>" style="left: 50%;top: 50%;transform: translate(-60%,-90%);margin-top: 150px;"><span><?php echo $progress ?></span></div>
+									<div class="progress-circle progress-<?php echo $progress ?>" style="left: 50%;top: 0%;transform: translate(-60%,-90%);margin-top: 150px;"><span><?php echo $progress ?></span></div>
 								</div>
 							</div>
 							<?php } ?>
@@ -183,16 +184,10 @@ if (isset($_GET['acyear']))
 								<div class="card" onclick="window.location.href='index.php?sid=<?php echo $row['sid']."&subject_name=".$row['subject_name'] ?>'">
 									<div class="subject"><?php echo $row['subject_name'] ?></div>
 									<div class="section">(<?php echo $row['year'] ?>/4 <?php echo $row['section'] ?>)</div>
-									<div class="progress-circle progress-<?php echo $progress ?>" style="left: 50%;top: 50%;transform: translate(-60%,-90%);margin-top: 150px;"><span><?php echo $progress ?></span></div>
+									<div class="progress-circle progress-<?php echo $progress ?>" style="left: 50%;top: 0%;transform: translate(-60%,-90%);margin-top: 150px;"><span><?php echo $progress ?></span></div>
 								</div>
 							</div>
 							<?php } ?>
-							<!-- <div class="col-sm-4">
-								<div class="card"></div>
-							</div>
-							<div class="col-sm-4">
-								<div class="card"></div>
-							</div> -->
 						</div>
 
 					</div>
