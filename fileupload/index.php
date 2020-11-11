@@ -199,7 +199,7 @@ $file = glob ("./uploads/$page/$sid.*");
     </head>
     <body>
 
-        <h3 style="margin: 0;text-align: center; padding-bottom: 40px;"><?php echo $pagename ?></h3>
+        <h3 style="margin: 0;margin-top: 20px;text-align: center; padding-bottom: 40px;"><?php echo $pagename ?></h3>
         <div class="container card_upload">
             <form method="post" action="" enctype="multipart/form-data">
                 <div class="row">

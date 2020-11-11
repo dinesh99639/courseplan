@@ -157,7 +157,7 @@ if (isset($_POST['save_cbs']))
     </div>
     <br>
     <?php 
-      if ($count) echo "<div id='store'>".$remedial."</div>";
+      if ($count) echo "<div id='store' align='center'>".$remedial."</div>";
       else {
     ?>
     <div id="store" align="center">
