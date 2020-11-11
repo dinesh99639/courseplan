@@ -124,7 +124,7 @@
 
     </head>
     <body>
-        <div id="paper">
+        <div id="paper" style="margin-left: 100px;">
             <?php echo $paper; ?>
         </div>
 

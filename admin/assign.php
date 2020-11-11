@@ -174,7 +174,7 @@ Year:
   <option value="3">3rd year</option>
   <option value="4">4th year</option>
 </select>
-Year:
+Semester:
 <select name="semester">
   <option value="1">1st semester</option>
   <option value="2">2nd semester</option>

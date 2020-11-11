@@ -17,6 +17,8 @@ if (isset($_POST['change']))
     {
         $qry = "UPDATE users set password='$password1' where email='$email' ";
         mysqli_query($db, $qry);
+
+        ?><script>window.location.href="logout.php"</script><?php
     }
 }
 

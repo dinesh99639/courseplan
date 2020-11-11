@@ -13,7 +13,7 @@ if (isset($_POST['savepaper']))
 
     $exists = mysqli_num_rows(mysqli_query($db, "SELECT id from papers where user_id='$id' and type='$paper_name' "));
 
-    echo $exists;
+    //echo $exists;
     if ($exists) $qry = "UPDATE papers set paper='$data' where user_id='$id' and type='$paper_name' ";
     else $qry = "INSERT INTO `papers`(`user_id`, `modified`, `type`, `paper`) VALUES ('$id', NOW(), '$paper_name', '$data')";
 
@@ -147,12 +147,12 @@ if (isset ($_GET['paper_id']))
                 <button onclick="save()" id="save" class='btn'>Save</button>
             </div>
         </div>
-        <?php if (isset($_GET['paper_id'])) {echo "<div id='paper'>".$paper."</div>";} 
+        <?php if (isset($_GET['paper_id'])) {echo "<div id='paper' style='margin-left: 100px;'>".$paper."</div>";} 
         else {
         ?>
-        <div id="paper">
+        <div id="paper" style="margin-left: 100px;">
             
-            <div id="co_array">[]</div>
+            <div style="display: none;" id="co_array">[]</div>
             
 
             <div style="margin-left: 10%;width: 1000px;">
@@ -202,8 +202,8 @@ if (isset ($_GET['paper_id']))
 	        </table>
 	        <p class="wishes" style="margin-left: 10%;width: 1000px;text-align: center;">*** All the Best ***</p>
 	        <br><br>
-        <div id="qno">0</div><br>
-        <div id="review_data">[[0,0,0]]</div><br>
+        <div style="display: none;" id="qno">0</div><br>
+        <div style="display: none;" id="review_data">[[0,0,0]]</div><br>
         <div id="p2"></div>
         </div>
         <?php } ?>

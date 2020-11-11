@@ -8,6 +8,8 @@ $id = $_SESSION['userid'];
 $sid = $_SESSION['sid'];
 $acyear = $_SESSION['academic_year'];
 
+$mid = $_GET['mid'];
+
 $sql = "SELECT u.name,s.sid FROM users u inner join subjects s on u.userid=s.fid where s.academic_year='$acyear' and s.subject_name in (select subject_name from subjects where sid='$sid') order by u.name ";
 $res = mysqli_query($db, $sql);
 // order by u.name 
@@ -41,9 +43,9 @@ $res = mysqli_query($db, $sql);
     <body>
 
         <div class="row" style="margin-top:30px;">
-            <div class="col-sm-2"></div>
+            <!-- <div class="col-sm-2"></div> -->
             <div class="col-sm-8">
-                <table class="table table-striped" style="text-align: center; width:500px; margin-left: 200px;">
+                <table class="table table-striped" style="text-align: center; width:500px; margin-left: 30px;">
                     <thead>
                     <tr>
                         <th style="text-align: center;">Faculty Name</th>
@@ -56,7 +58,7 @@ $res = mysqli_query($db, $sql);
                     ?>
                     <tr>
                         <td><?php echo $data['name']; ?></td>
-                        <td style="width: 40px;"><button onclick='window.parent.location.href="midpapers.php?mid=1&send_to_sid=<?php echo $data['sid'] ?>"'>Send</button></td>
+                        <td style="width: 40px;"><button onclick='window.parent.location.href="midpapers.php?mid=<?php echo $mid;?>&send_to_sid=<?php echo $data['sid'] ?>"'>Send</button></td>
                     </tr>
                     <?php } ?>
                     </tbody>
