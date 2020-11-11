@@ -19,8 +19,10 @@ $status = mysqli_fetch_assoc(mysqli_query($db, $qry));
 		<style type="text/css">
 			.header
 			{
-				height: 60px;
+				height: 50px;
 				background-color: rgb(52, 69, 180);
+				box-sizing: border-box;
+				box-shadow: 0 4px 13px rgba(0,0,0,0.2);
 			}
 			.header h2 .logo {
 			  color: #fff;
@@ -61,14 +63,14 @@ $status = mysqli_fetch_assoc(mysqli_query($db, $qry));
 			  	
 			  	<div class="menu">
 			  		<ul>
-			  			<li><h2 style="margin: 0!important;padding: 12px;"><a href="../dashboard" class="logo">Course Files</a></h2></li>
+			  			<li><h2 style="margin: 0!important;padding: 10px;"><a href="../dashboard" class="logo">Course Files</a></h2></li>
 			  			<!-- <li style="color: white;font-size: 50px;font-weight: 100;">|</li> -->
 			  			<!-- <div class="menu_items">
 				  			<li style="margin-left: 50px;"><a href="../dashboard">Dashboard</a></li>
 			  			</div> -->
-			  			<li style="float: right;color: white; font-size: 20px;margin-right: 10px;padding: 15px;"><a href="../login/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+			  			<li style="float: right;color: white; font-size: 20px;margin-right: 10px;padding: 10px;"><a href="../login/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
 
-			  			<li style="float: right;color: white; font-size: 20px;margin-right: 10px;padding: 15px;"><i class="fa fa-user" aria-hidden="true"></i> &nbsp;<?php echo $name ?></li>
+			  			<li style="float: right;color: white; font-size: 20px;margin-right: 10px;padding: 10px;"><i class="fa fa-user" aria-hidden="true"></i> &nbsp;<?php echo $name ?></li>
 			  		</ul>
 			  	</div>
 		    	

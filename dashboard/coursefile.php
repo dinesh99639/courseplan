@@ -127,72 +127,73 @@ th,td
                     
                     <td><font size="4px">Individual time table</font></td>
                     <td>
-                      <?php if ($data['individual_time_table']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-                          else if(substr($data['individual_time_table'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+                      <?php if ($data['individual_time_table']=="Completed") echo "<img src='../icons/checked.svg'>";
+                          else if(substr($data['individual_time_table'], 0, 5) == "_req_") echo "<img src='../icons/alert.svg'>"; ?>
                     </td>
                   </tr>
                 <tr>
+                  <!-- <img src="../icons/checked.svg"> -->
                     
                     <td><font size="4px">Class time table</font></td>
                     <td>
-                      <?php if ($data['class_time_table']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-                          else if(substr($data['class_time_table'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+                      <?php if ($data['class_time_table']=="Completed") echo "<img src='../icons/checked.svg'>";
+                          else if(substr($data['class_time_table'], 0, 5) == "_req_") echo "<img src='../icons/alert.svg'>"; ?>
                     </td>
                   </tr>
                   <tr>
                     
                     <td><font size="4px">Course Plan</font></td>
                     <td>
-                      <?php if ($data['course_plan']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-                          else if(substr($data['course_plan'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+                      <?php if ($data['course_plan']=="Completed") echo "<img src='../icons/checked.svg'>";
+                          else if(substr($data['course_plan'], 0, 5) == "_req_") echo "<img src='../icons/alert.svg'>"; ?>
                     </td>
                   </tr>
                   <tr>
                     
                     <td><font size="4px">Lesson Plan</font></td>
                     <td>
-                      <?php if ($data['lesson_plan']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-                          else if(substr($data['lesson_plan'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+                      <?php if ($data['lesson_plan']=="Completed") echo "<img src='../icons/checked.svg'>";
+                          else if(substr($data['lesson_plan'], 0, 5) == "_req_") echo "<img src='../icons/alert.svg'>"; ?>
                     </td>
                   </tr>
                   <tr>
                     
                     <td><font size="4px">Assignment</font></td>
                     <td>
-                      <?php if ($data['assignment']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-                          else if(substr($data['assignment'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+                      <?php if ($data['assignment']=="Completed") echo "<img src='../icons/checked.svg'>";
+                          else if(substr($data['assignment'], 0, 5) == "_req_") echo "<img src='../icons/alert.svg'>"; ?>
                     </td>
                   </tr>
                   <tr>
                     
                     <td><font size="4px">Mid Question paper</font></td>
                     <td>
-                      <?php if ($data['mid']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-                          else if(substr($data['mid'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+                      <?php if ($data['mid']=="Completed") echo "<img src='../icons/checked.svg'>";
+                          else if(substr($data['mid'], 0, 5) == "_req_") echo "<img src='../icons/alert.svg'>"; ?>
                     </td>
                   </tr>
                   <tr>
                     
                     <td><font size="4px">Remedial classes</font></td>
                     <td>
-                      <?php if ($data['remedial']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-                          else if(substr($data['remedial'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+                      <?php if ($data['remedial']=="Completed") echo "<img src='../icons/checked.svg'>";
+                          else if(substr($data['remedial'], 0, 5) == "_req_") echo "<img src='../icons/alert.svg'>"; ?>
                     </td>
                   </tr>
                   <tr>
                     
                     <td><font size="4px">Tutorial</font></td>
                     <td>
-                      <?php if ($data['tutorial']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-                          else if(substr($data['tutorial'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+                      <?php if ($data['tutorial']=="Completed") echo "<img src='../icons/checked.svg'>";
+                          else if(substr($data['tutorial'], 0, 5) == "_req_") echo "<img src='../icons/alert.svg'>"; ?>
                     </td>
                   </tr>
                   <tr>
                     
                     <td><font size="4px">Quiz</font></td>
                     <td>
-                      <?php if ($data['quiz']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-                          else if(substr($data['quiz'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+                      <?php if ($data['quiz']=="Completed") echo "<img src='../icons/checked.svg'>";
+                          else if(substr($data['quiz'], 0, 5) == "_req_") echo "<img src='../icons/alert.svg'>"; ?>
                     </td>
                   </tr>
 
@@ -200,16 +201,16 @@ th,td
                     
                     <td><font size="4px">Notes</font></td>
                     <td>
-                      <?php if ($data['notes']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-                          else if(substr($data['notes'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+                      <?php if ($data['notes']=="Completed") echo "<img src='../icons/checked.svg'>";
+                          else if(substr($data['notes'], 0, 5) == "_req_") echo "<img src='../icons/alert.svg'>"; ?>
                     </td>
                   </tr> 
                   <tr>
                     
                     <td><font size="4px">CO-PO Attainment</font></td>
                     <td>
-                      <?php if ($data['co_po']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-                          else if(substr($data['co_po'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+                      <?php if ($data['co_po']=="Completed") echo "<img src='../icons/checked.svg'>";
+                          else if(substr($data['co_po'], 0, 5) == "_req_") echo "<img src='../icons/alert.svg'>"; ?>
                     </td>
                   </tr> 
                 <!-- </tr> -->

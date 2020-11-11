@@ -11,14 +11,14 @@ $data = mysqli_fetch_assoc(mysqli_query($db, $qry));
 if (isset($_GET['delete']))
 {
 	if (count(glob($_GET['delete']))) unlink ($_GET['delete']);
-	?><script type="text/javascript">window.location.href='midpapers2.php';</script><?php
+	?><script type="text/javascript">window.location.href='midpapers.php';</script><?php
 }
 if (isset($_GET['upload']))
 {
 	$filetype = pathinfo($_FILES["file"]["name"],PATHINFO_EXTENSION);
 	if ($filetype!="php") 
     	move_uploaded_file($_FILES["file"]["tmp_name"], $_GET['upload']);
-	?><script type="text/javascript">window.location.href='midpapers2.php';</script><?php
+	?><script type="text/javascript">window.location.href='midpapers.php';</script><?php
 
 	// if (pathinfo($_GET['upload'],PATHINFO_EXTENSION)=="pdf")
 }
@@ -32,6 +32,24 @@ if (isset($_GET['send_to_sid']))
 	?><script type="text/javascript">//window.location.href="midpapers.php";</script><?php
 }
 $upload_files = array("paper", "scheme", "key", "marks", "sample_papers");
+
+// Send to Admin
+$qry = "SELECT mid from status where sid='$sid' ";
+$sta = mysqli_fetch_assoc(mysqli_query($db,$qry))['mid'];
+
+if (isset($_GET['send']))
+{
+    $value = $sta;
+    if(substr($sta, 0, 5) != "_req_") $value = "_req_".$value;
+    else $value = substr($sta, 5);
+    
+    $qry = "UPDATE status set mid='$value' where sid='$sid' ";
+    mysqli_query($db,$qry);
+    // echo $qry;
+    
+    ?><script type="text/javascript">window.location.href="midpapers.php"</script><?php
+}
+// End
 
 ?>
 
@@ -111,15 +129,15 @@ $upload_files = array("paper", "scheme", "key", "marks", "sample_papers");
 				<img src="defaults/paper.png">
 			</div>
 			<div class="col-sm-10">
-				<div class="title">Mid - 1</div>
-				<div class="modified" style="margin-bottom: 15px;">Date Modified: 14-02-2020</div>
-				<div class="col-sm-2"><button path='<?php echo "uploads/".$data['academic_year']."/".$data['subject_name']."/mid1/".$sid."_paper.pdf"?>' data-target="#mid1modal_paper" data-toggle="modal" class="pbutton" onclick="loadmodel($(this).attr('path'))">Paper</button></div>
-				<div class="col-sm-2"><button path='<?php echo "uploads/".$data['academic_year']."/".$data['subject_name']."/mid1/".$sid."_scheme.pdf"?>' data-target="#mid1modal_scheme" data-toggle="modal" class="pbutton" onclick="loadmodel($(this).attr('path'))">Scheme of Evalution</button></div>
-				<div class="col-sm-2"><button path='<?php echo "uploads/".$data['academic_year']."/".$data['subject_name']."/mid1/".$sid."_key.pdf"?>' data-target="#mid1modal_key" data-toggle="modal" class="pbutton" onclick="loadmodel($(this).attr('path'))">Key</button></div>
-				<div class="col-sm-2"><button path='<?php echo "uploads/".$data['academic_year']."/".$data['subject_name']."/mid1/".$sid."_marks.pdf"?>' data-target="#mid1modal_marks" data-toggle="modal" class="pbutton" onclick="loadmodel($(this).attr('path'))">Marks</button></div>
-				<div class="col-sm-2"><button path='<?php echo "uploads/".$data['academic_year']."/".$data['subject_name']."/mid1/".$sid."_sample_papers.pdf"?>' data-target="#mid1modal_sample_papers" data-toggle="modal" class="pbutton" onclick="loadmodel($(this).attr('path'))">Sample Papers</button></div>
-				<div class="col-sm-2"><button  path='<?php echo "send_for_review.php" ?>' class="pbutton" onclick="loadmodel($(this).attr('path'))">Send for review</button></div>
-			</div>
+                <div class="title">Mid - 1</div>
+                <div class="modified" style="margin-bottom: 15px;">Date Modified: 14-02-2020</div>
+                <div class="col-sm-2"><button path='<?php echo "uploads/".$data['academic_year']."/".$data['subject_name']."/mid1/".$sid."_paper.pdf"?>' data-target="#mid1modal_paper" data-toggle="modal" class="pbutton" onclick="loadmodel($(this).attr('path'))">Paper</button></div>
+                <div class="col-sm-2"><button path='<?php echo "uploads/".$data['academic_year']."/".$data['subject_name']."/mid1/".$sid."_scheme.pdf"?>' data-target="#mid1modal_scheme" data-toggle="modal" class="pbutton" onclick="loadmodel($(this).attr('path'))">Scheme of Evalution</button></div>
+                <div class="col-sm-2"><button path='<?php echo "uploads/".$data['academic_year']."/".$data['subject_name']."/mid1/".$sid."_key.pdf"?>' data-target="#mid1modal_key" data-toggle="modal" class="pbutton" onclick="loadmodel($(this).attr('path'))">Key</button></div>
+                <div class="col-sm-2"><button path='<?php echo "uploads/".$data['academic_year']."/".$data['subject_name']."/mid1/".$sid."_marks.pdf"?>' data-target="#mid1modal_marks" data-toggle="modal" class="pbutton" onclick="loadmodel($(this).attr('path'))">Marks</button></div>
+                <div class="col-sm-2"><button path='<?php echo "uploads/".$data['academic_year']."/".$data['subject_name']."/mid1/".$sid."_sample_papers.pdf"?>' data-target="#mid1modal_sample_papers" data-toggle="modal" class="pbutton" onclick="loadmodel($(this).attr('path'))">Sample Papers</button></div>
+                <div class="col-sm-2"><button class="pbutton">Send for review</button></div>
+            </div>
 		</div>
 
 		<div class="row card">
@@ -169,7 +187,84 @@ $upload_files = array("paper", "scheme", "key", "marks", "sample_papers");
 
 
 
+	<!-- Sent to Admin -->
 
+
+        <style type="text/css">
+            #sta
+            {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                text-align: center;
+            }
+            #sta_btn
+            {
+                border-radius: 50%;
+                /*background-color: rgb(52, 69, 200);*/
+                height: 50px;
+                width: 50px;
+                padding-top: 10px;
+                border: 1px solid black;
+                cursor: pointer;    
+            }
+            #sta_head
+            {
+                position: fixed;
+                text-align: left;
+                padding: 5px;
+                background-color: white;
+                bottom: 40px;
+                right: 100px;
+                width: 250px;
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+            #sta_desc
+            {
+                position: fixed;
+                text-align: left;
+                padding: 5px 5px 55px 5px;
+                background-color: white;
+                bottom: 40px;
+                right: 100px;
+                width: 250px;
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+            #sta_msg
+            {
+                display: none;
+            }
+        </style>
+
+        <div id="sta">
+            <div id="sta_btn"><i class="fa fa-paper-plane-o fa-2x" aria-hidden='true'></i></div>
+            <div id="sta_msg">
+                <div id="sta_desc">
+                    <div id="sta_head">
+                        Status : 
+                        <?php
+                            if(substr($sta, 0, 5) == "_req_") echo "Requested"; 
+                            else if(strpos($sta, 'Completed') !== false) echo "Completed"; 
+                            else echo "Remarks Given by Admin";
+                        ?>
+                        <br>
+                        <button style="float: right; margin-right: 10px;"  onclick="window.location.href='<?php echo "midpapers.php?send" ?>' "><?php if(substr($sta, 0, 5) != "_req_") echo "Send"; else echo "Unsend"; ?> Request</button>
+                    </div>
+                    <?php 
+                        if(substr($sta, 0, 5) == "_req_") echo substr($sta, 5);
+                        else echo $sta;
+                    ?>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('#sta').click(()=> {
+                $('#sta_msg').toggle();
+            });
+        </script>
+        <!-- end  -->
 
 
 
@@ -185,24 +280,22 @@ $upload_files = array("paper", "scheme", "key", "marks", "sample_papers");
 	<script type="text/javascript">
 		function upload_pdf(path)
 		{	
-			$('#upload_pdf_form').attr("action","midpapers2.php?upload="+path);
+			$('#upload_pdf_form').attr("action","midpapers.php?upload="+path);
 			$('.file_select').click();
 		}
 
 		function loadmodel(path)
 		{
-			// $('#paper_view_model').load("load_paper_model.php?path="+encodeURIComponent(path)+"&rand="+(Math.random()*1000000),{},()=>{
-				// console.log(path);
 				$('#model_frame').attr('src', path+"?v="+$.now());
 				$('#model_download').attr('href', path+"?v="+$.now());
 				$('#model_upload').attr('path', path);
-				$('#model_delete').attr('onclick', "window.location.href=\'midpapers2.php?delete="+path+"\'");
-			// });
+				$('#model_delete').attr('onclick', "window.location.href=\'midpapers.php?delete="+path+"\'");
+
 				$('#myModalLabel').modal('show');
-			// window.location.href='load_paper_model.php?path='+encodeURIComponent(path);
 
-
-
+                $.ajax({url: path,type:'HEAD',error:()=>{
+                    $('#model_frame').attr('src', "defaults/upload_file.jpg?v="+$.now());
+                }});
 		}
 	</script>
 
