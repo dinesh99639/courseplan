@@ -182,7 +182,7 @@ if (isset($_POST['saverubrics']))
     function update(obj) 
     {
       if ($(obj).is("textarea")) $(obj).text(obj.value);
-      if ($(obj).is("input")) $(obj).attr("value",$(obj).val());
+      if ($(obj).is("input")) $(obj).attr("value",obj.value);
     }
 
     function redirectPost(url, data) {
