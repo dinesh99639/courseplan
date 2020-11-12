@@ -161,7 +161,7 @@ if (isset($_POST['saverubrics']))
     function deleteColumn() {
         var allRows = document.getElementById('myTable').rows;
         for (var i = 0; i < allRows.length; i++) {
-            if (allRows[i].cells.length >= 0) {
+            if (allRows[i].cells.length > 0) {
                 allRows[i].deleteCell(-1); //delete the cell
             } else {
                 alert("You can't delete more columns.");
@@ -172,20 +172,15 @@ if (isset($_POST['saverubrics']))
     
     //deleting rows
     function deleteRow() {
-        var allColumns = document.getElementById('myTable').deleteRow(0);
-        for (var i = 0; i < allColumns.length; i++) {
-            if (allColumns[i].cells.length > 3) {
-                allColumns[i].deleteCell(-1); //delete the cell
-            } else {
-                alert("You can't delete more rows.");
-                return;
-            }
-        }
+        var table = document.getElementById('myTable');
+        var rowCount = table.rows.length;
+
+        if (rowCount>0) table.deleteRow(rowCount -1);
+        else alert("You can't delete more rows."); 
     }
 
     function update(obj) 
     {
-      
       if ($(obj).is("textarea")) $(obj).text(obj.value);
       if ($(obj).is("input")) $(obj).attr("value",$(obj).val());
     }
