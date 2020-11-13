@@ -52,20 +52,20 @@ if (isset($_POST['save_cbs']))
 
     <style>
         html::-webkit-scrollbar
-    {
-        width: 10px;
-        background-color: #F5F5F5;
-    }
+        {
+            width: 10px;
+            background-color: #F5F5F5;
+        }
 
-    html::-webkit-scrollbar-thumb
-    {
-        border-radius: 20px;
-        background-image: -webkit-gradient(linear,
-                                           left bottom,
-                                           left top,
-                                           color-stop(1.44, rgb(122,130,217)));
-        -webkit-background-color: rgba(0,0,0,1);
-    }
+        html::-webkit-scrollbar-thumb
+        {
+            border-radius: 20px;
+            background-image: -webkit-gradient(linear,
+                                               left bottom,
+                                               left top,
+                                               color-stop(1.44, rgb(122,130,217)));
+            /*-webkit-background-color: rgba(0,0,0,1);*/
+        }
         #sidebar
         {
             padding-left: 10px;
@@ -149,11 +149,11 @@ if (isset($_POST['save_cbs']))
 </head>
 
 <body>
-    <h1 style="text-align:center;font-weight: bold;font-family: 'Ultra', sans-serif; ">Content Beyond Syllabus</h1>
+    <h1 style="text-align:center;font-weight: bold;font-family: sans-serif; ">Content Beyond Syllabus</h1>
     <div class="button">
         <button onclick="myCreateFunction()" class='btn'>Create row</button>
         <button onclick="myDeleteFunction()" class='btn'>Delete row</button>
-        <input type="button" onclick="copy()" value=" Save " class='btn'>
+        <input type="button" onclick="save()" value=" Save " class='btn'>
     </div>
     <br>
     <?php 
@@ -196,8 +196,7 @@ if (isset($_POST['save_cbs']))
         }*/
         function update(obj) 
         {
-          if ($(obj).is("input")) $(obj).attr("value",$(obj).val());
-          if ($(obj).is("textarea")) $(obj).text(obj.value);
+            $(obj).attr("value", $(obj).val());
         }
 
         function redirectPost(url, data) {
@@ -215,9 +214,10 @@ if (isset($_POST['save_cbs']))
             form.submit();
         }
         function myDeleteFunction() {
-          document.getElementById("myTable").deleteRow(-1);
+            var table = document.getElementById("myTable");
+            if (table.rows.length > 1) table.deleteRow(-1);
         }
-        function copy()
+        function save()
         {
             var copy = $('#store').html();
             // $('#p2').html(copy);

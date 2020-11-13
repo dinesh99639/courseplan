@@ -173,7 +173,10 @@ $sent = mysqli_query($db, $sql);
                             else $status = "Pending";
                         ?>
                         <td><?php echo $status; ?></td>
-                        <td style="padding-left: 0;padding-right: 0;"><button onclick="document.location.href='review_index.php?delete&rid=<?php echo $data['id'] ?>'">Delete</button></td>
+                        <td style="padding-left: 0;padding-right: 0;">
+                            <button onclick="document.location.href='review.php?rid=<?php echo $data['id'] ?>'">View</button>
+                            <button onclick="document.location.href='review_index.php?delete&rid=<?php echo $data['id'] ?>'">Delete</button>
+                        </td>
                     </tr>
                     <?php } ?>
                     </tbody>

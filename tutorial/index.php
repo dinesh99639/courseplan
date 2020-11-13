@@ -218,7 +218,8 @@ if (isset($_GET['send']))
             form.submit();
         }
         function myDeleteFunction() {
-          document.getElementById("myTable").deleteRow(-1);
+            var table = document.getElementById("myTable");
+            if (table.rows.length > 1) table.deleteRow(-1);
         }
         function copy()
         {
