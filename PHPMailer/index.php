@@ -11,9 +11,11 @@ $mail->Host = 'smtp.gmail.com'; // Which SMTP server to use.
 $mail->Port = 587; // Which port to use, 587 is the default port for TLS security.
 $mail->SMTPSecure = 'tls'; // Which security method to use. TLS is most secure.
 $mail->SMTPAuth = true; // Whether you need to login. This is almost always required.
-$mail->Username = "dinesh99639@gmail.com"; // Your Gmail address.
-$mail->Password = "SRI RAMA 8409"; // Your Gmail login password or App Specific Password.
 
+// Create file mail_credentials.php and include the below two lines
+$mail->Username = ""; // Your Gmail address.
+$mail->Password = ""; // Your Gmail login password or App Specific Password. 
+require 'mail_credentials.php';
 
 $reset_mail = $_GET['email'];
 $otp = rand()%1000000;
