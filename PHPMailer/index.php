@@ -12,6 +12,7 @@ $mail->Port = 587; // Which port to use, 587 is the default port for TLS securit
 $mail->SMTPSecure = 'tls'; // Which security method to use. TLS is most secure.
 $mail->SMTPAuth = true; // Whether you need to login. This is almost always required.
 
+// You should enable "Less secure apps for your mail account"
 // Create file mail_credentials.php and include the below two lines
 $mail->Username = ""; // Your Gmail address.
 $mail->Password = ""; // Your Gmail login password or App Specific Password. 
