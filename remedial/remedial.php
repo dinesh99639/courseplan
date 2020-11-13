@@ -155,7 +155,7 @@ if (isset($_POST['save_remedial']))
       else {
     ?>
     <div id="store">
-    <table id="myTable">
+    <table id="myTable" align='center'>
         <tr>
             <th>Rollno</th>
             <th>Student name</th>
@@ -202,8 +202,8 @@ if (isset($_POST['save_remedial']))
         }*/
         function update(obj) 
         {
-          if ($(obj).is("input")) $(obj).attr("value",$(obj).val());
-          if ($(obj).is("textarea")) $(obj).text(obj.value);
+          $(obj).attr("value",$(obj).val());
+          // if ($(obj).is("textarea")) $(obj).text(obj.value);
         }
 
         function redirectPost(url, data) {
@@ -221,7 +221,8 @@ if (isset($_POST['save_remedial']))
             form.submit();
         }
         function myDeleteFunction() {
-          document.getElementById("myTable").deleteRow(-1);
+            var table = document.getElementById("myTable");
+            if (table.rows.length > 1) table.deleteRow(-1);
         }
         function copy()
         {

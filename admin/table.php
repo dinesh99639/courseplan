@@ -46,7 +46,7 @@ $data = mysqli_fetch_assoc(mysqli_query($db, $qry));
 <style>
 	table th,td{
 		border:2px solid black;
-		border-collapse: collapse;
+		/*border-collapse: collapse;*/
 	}
 	table{
 		width:60%;
@@ -75,7 +75,7 @@ $data = mysqli_fetch_assoc(mysqli_query($db, $qry));
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 <h2 align="center">admin review report</h2>
 <div class="container">
 	<form method="post">
@@ -94,26 +94,27 @@ $data = mysqli_fetch_assoc(mysqli_query($db, $qry));
 			<th><font size="4px">Average</font></th> -->
 		</tr>
 		<!-- <tr> -->
-			<tr>
-					
-					<td><font size="4px">Individual time table</font></td>
-					<td>
-						<?php if ($data['individual_time_table']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
-							  else if(substr($data['individual_time_table'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
-					</td>
-					<td>
-						<textarea name="individual_time_table" width="100px" height="100px"><?php 
-						if(strpos($data['individual_time_table'], '_req_') !== false) echo substr($data['individual_time_table'], 5);
-                        else echo $data['individual_time_table'];
-						?>
-						</textarea>
-					</td>
-					<td>
-						<button onclick="window.location.href='../fileupload/index.php?page=individual_timetable'; return false;">View</button>
-						<button onclick="$('textarea[name=\'individual_time_table\']').val('Completed'); return false;">Mark Completed</button></td>
-					
+		<tr>
+				
+				<td><font size="4px">Individual time table</font></td>
+				<td>
+					<?php if ($data['individual_time_table']=="Completed") echo "<i class='fa fa-check fa-2x' aria-hidden='true'></i>";
+						  else if(substr($data['individual_time_table'], 0, 5) == "_req_") echo "<i class='fa fa-exclamation fa-2x' aria-hidden='true'></i>"; ?>
+				</td>
+				<td>
+					<textarea name="individual_time_table" width="100px" height="100px"><?php 
+					if(strpos($data['individual_time_table'], '_req_') !== false) echo substr($data['individual_time_table'], 5);
+                    else echo $data['individual_time_table'];
+					?>
+					</textarea>
+				</td>
+				<td>
+					<button onclick="window.location.href='../fileupload/index.php?page=individual_timetable'; return false;">View</button>
+					<button onclick="$('textarea[name=\'individual_time_table\']').val('Completed'); return false;">Mark Completed</button></td>
+				
 
-				</tr>
+			</tr>
+
 			<tr>
 					
 					<td><font size="4px">Class time table</font></td>
